@@ -1,0 +1,32 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 5.1//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="br.com.webproject.domain.Pessoa" table="Pessoa">
+    <id name="idPessoa" column="id_pessoa" type="int">
+		<generator class="increment"/>
+    </id>
+    
+    <property name="nome"/>
+    
+    <property name="dataNascimento" type="java.util.Date">
+    	<column name="data_nascimento"/>
+    </property>
+    
+    <property name="inscricao" type="java.lang.String">
+    	<column name="inscricao"/>
+    </property>
+    
+    <property name="endereco" type="java.lang.String">
+    	<column name="endereco"/>
+    </property>
+    
+    <property name="telefone" type="java.lang.String">
+    	<column name="telefone"/>
+    </property>
+    
+    <property name="email" type="java.lang.String">
+    	<column name="email"/>
+    </property>
+  </class>
+</hibernate-mapping>
